@@ -5,6 +5,6 @@ Feature: Login into Moneta
     Scenario: This test case tests the functionality of login functionality of the Moneta application
 
     Given I open Moneta stage application
-    When  I enter email address into email text box
-    And click on Next button
+    # When  I enter email address into email text box
+    # And click on Next button
     

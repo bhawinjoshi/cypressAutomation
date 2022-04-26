@@ -1,6 +1,6 @@
 {
     "env": {
-        "stage_url": "https://www.codal.com"
+        "stage_url": "https://www.google.com"
     },
     
     "testFiles": "**/*.*"

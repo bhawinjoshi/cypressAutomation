@@ -1,0 +1,33 @@
+[
+  {
+    "description": "    This will validate login functionality of Moneta application",
+    "keyword": "Feature",
+    "name": "Login into Moneta",
+    "line": 1,
+    "id": "login-into-moneta",
+    "tags": [],
+    "uri": "login.feature",
+    "elements": [
+      {
+        "id": "login-into-moneta;this-test-case-tests-the-functionality-of-login-functionality-of-the-moneta-application",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "This test case tests the functionality of login functionality of the Moneta application",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I open Moneta stage application",
+            "result": {
+              "status": "passed",
+              "duration": 2317000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
