@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "preSetup": "npm i"
+    "test": "node_modules\\.bin\\cypress run --headed --browser chrome",
+    "testHeadless": "node_modules\\.bin\\cypress run",
+    "preSetup": "npm i",
+    "recordDashboardTest" : "npm run test -- --record --key 6cc956cb-2ecb-44d1-8ede-6e0dd49abf7d "
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +24,7 @@
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "cucumberJson": {
-      "generate": true,
+      "generate": false,
       "outputFolder": "cypress/cucumber-json",
       "filePrefix": "",
       "fileSuffix": ".cucumber"
