@@ -12,4 +12,5 @@ videos
 monetaAutomation/cucumber-html-report.js
 /cucumber-json/
 screenshots
+cypress/cucumber-json
 .vscode/
