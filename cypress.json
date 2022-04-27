@@ -1,5 +1,5 @@
 {
-  "reporter" : "mochawesome",
+  "reporter": "mochawesome",
   "env": {
     "stage_url": "https://www.google.com"
   },

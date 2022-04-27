@@ -10,4 +10,5 @@ reports
 mochawesome-report
 videos
 monetaAutomation/cucumber-html-report.js
+cucumber-json
 .vscode/
