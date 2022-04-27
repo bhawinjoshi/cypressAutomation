@@ -6,5 +6,8 @@ npm-debug.log
 /coverage/
 Configuration/appConfig.properties
 package-lock.json
-Reports
+reports
+mochawesome-report
+videos
+monetaAutomation/cucumber-html-report.js
 .vscode/

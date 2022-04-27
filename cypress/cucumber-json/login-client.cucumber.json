@@ -22,7 +22,7 @@
             "name": "User is at the login page",
             "result": {
               "status": "passed",
-              "duration": 5048000000
+              "duration": 4225000000
             }
           },
           {
@@ -32,7 +32,7 @@
             "name": "User enters username as 'Admin' and password as 'admin123'",
             "result": {
               "status": "passed",
-              "duration": 748000000
+              "duration": 560000000
             }
           },
           {
@@ -42,7 +42,7 @@
             "name": "User clicks on login button",
             "result": {
               "status": "passed",
-              "duration": 5723000000
+              "duration": 5557000000
             }
           },
           {
@@ -52,7 +52,7 @@
             "name": "User is able to successfully login to the Website",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 97000000
             }
           }
         ]

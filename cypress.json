@@ -1,7 +1,8 @@
 {
-    "env": {
-        "stage_url": "https://www.google.com"
-    },
-    
-    "testFiles": "**/*.*"
+  "reporter" : "mochawesome",
+  "env": {
+    "stage_url": "https://www.google.com"
+  },
+  "testFiles": "**/*.{feature,features}",
+  "projectId": "fjy78m"
 }
