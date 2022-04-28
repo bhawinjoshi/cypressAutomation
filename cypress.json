@@ -4,5 +4,8 @@
     "stage_url": "https://www.google.com"
   },
   "testFiles": "**/*.{feature,features}",
-  "projectId": "fjy78m"
+  "projectId": "fjy78m",
+  "retries": {
+    "runMode": 1
+  }
 }
