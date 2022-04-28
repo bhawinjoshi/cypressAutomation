@@ -1,14 +1,19 @@
 /// <reference types="Cypress" />
+import cypress from 'cypress';
 import { Given, When, Then, And } from 'cypress-cucumber-preprocessor/steps'
 import login_PO from '../../../support/pageObjects/login_PO'
 const login = new login_PO();
 
-Given('User is at the login page', () => {
 
-    cy.visit('https://opensource-demo.orangehrmlive.com/')
+Given('Login to Moneta application as client', () => {
+
+    cy.visit('https://moneta_stage:.YaD)gQCV3Rz@stage.moneta.stage-codal.net/')
+    cy.get("input[placeholder='Enter email address']").should('be.visible')
+    
+    
 })
 
-When('User enters username as {string} and password as {string}', (username, password) => {
+When('User enters Email address as {string}', (username) => {
     cy.get('#txtUsername').type(username)
     cy.get('#txtPassword').type(password)
 
