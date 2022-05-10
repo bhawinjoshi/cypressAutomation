@@ -5,8 +5,10 @@ const login = new loginPage();
 //import login_PO from '../../../support/pageObjects/login_PO'
 
 
-Given('Hit the Moneta stage URL', () => {
-    cy.visit('https://moneta_stage:.YaD)gQCV3Rz@stage.moneta.stage-codal.net/')
+Given('Hit the Moneta dev URL', () => {
+    //cy.visit('https://moneta_stage:.YaD)gQCV3Rz@stage.moneta.stage-codal.net/')
+    cy.visit('https://moneta_dev:jM/q`L689}LG@dev.moneta.stage-codal.net/')
+    
 })
 
 When('User enters Email address as {string}', (username) => {
