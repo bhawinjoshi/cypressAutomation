@@ -1,7 +1,7 @@
 {
   "reporter": "mochawesome",
   "env": {
-    "stage_url": "https://www.google.com"
+    "dev_api_url": "https://dev.moneta.stage-codal.net/api/user/"
   },
   "testFiles": "**/*.{feature,features}",
   "projectId": "fjy78m",

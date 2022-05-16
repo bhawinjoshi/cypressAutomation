@@ -6,6 +6,7 @@ class loginPage {
     sso_button() { return cy.get(".btn.btn-sso.w-100") }
 
 
+
 }
 
 export default loginPage
