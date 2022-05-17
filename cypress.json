@@ -1,5 +1,5 @@
 {
-  "reporter": "mochawesome",
+  "baseUrl": "https://moneta_dev:T6J4WFVBuoXA@dev.moneta.stage-codal.net/",
   "env": {
     "dev_api_url": "https://dev.moneta.stage-codal.net/api/user/"
   },

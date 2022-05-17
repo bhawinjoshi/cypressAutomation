@@ -1,11 +1,10 @@
-Feature: Login
+Feature: Login as a Client
 
-    Scenario Outline: Login to Moneta application as client
+    Scenario: Login to Moneta application as client
 
         Given Hit the Moneta dev URL
         When User enters Email address as 'automationtest@codaldemo.com'
         And User clicks on Next button
-        Then User is able to successfully login to the Website
-        Examples:
-            | username | password |
-            | Admin    | admin123 |
+        And User enters password as 'Moneta@123'
+        And User clicks on Login button
+        Then Dashboard page should be displayed

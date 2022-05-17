@@ -7,10 +7,8 @@ npm-debug.log
 Configuration/appConfig.properties
 package-lock.json
 reports
-mochawesome-report
 videos
 monetaAutomation/cucumber-html-report.js
-/cucumber-json/
+jsconfig.json
 screenshots
-cypress/cucumber-json
 .vscode/

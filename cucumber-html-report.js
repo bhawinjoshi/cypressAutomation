@@ -1,27 +1,35 @@
+const os = require('os')
 const report = require('multiple-cucumber-html-reporter');
 
 report.generate({
-	jsonDir: 'cypress/cucumber-json',
-	reportPath: './reports/cucumber-htmlreport.html',
-	metadata:{
+    jsonDir: 'reports/cucumber-json',
+    reportPath: './reports/cucumber-htmlreport.html',
+    //saveCollectedJSON: true,
+    displayDuration: true,
+    pageTitle: "Moneta Automation Report",
+    reportName: "Moneta Automation Report",
+    //displayReportTime: 'true',
+    metadata: {
         browser: {
             name: 'chrome',
-            version: '100'
+            version: '100',
+            
         },
-        device: 'Local test machine',
+        device: 'win32',
         platform: {
-            name: 'ubuntu',
-            version: '16.04'
+            name: 'Windows',
+            version: '10'
         }
     },
+    
     customData: {
-        title: 'Run info',
+        title: 'Project Specifications',
         data: [
-            {label: 'Project', value: 'Custom project'},
-            {label: 'Release', value: '1.2.3'},
-            {label: 'Cycle', value: 'B11221.34321'},
-            {label: 'Execution Start Time', value: 'Nov 19th 2017, 02:31 PM EST'},
-            {label: 'Execution End Time', value: 'Nov 19th 2017, 02:56 PM EST'}
+            { label: 'Project', value: 'Moneta' },
+            { label: 'Purpose', value: 'Moneta Regression' },
+            //{ label: 'Cycle', value: 'B11221.34321' },
+            { label: 'Date', value: new Date().toLocaleString() },
+            //{ label: 'Execution End Time', value: 'Nov 19th 2017, 02:56 PM EST' }
         ]
     }
 });

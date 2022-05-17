@@ -6,7 +6,7 @@ const login = new loginPage();
 
 
 Given('Hit the Moneta dev URL', () => {
-    cy.visit('https://moneta_dev:jM/q`L689}LG@https://dev.moneta.stage-codal.net/')
+    cy.visit('/')
 })
 
 When('User clicks on SSO button', () => {
