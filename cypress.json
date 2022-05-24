@@ -6,6 +6,6 @@
   "testFiles": "**/*.{feature,features}",
   "projectId": "fjy78m",
   "retries": {
-    "runMode": 1
+    "runMode": 0
   }
 }
