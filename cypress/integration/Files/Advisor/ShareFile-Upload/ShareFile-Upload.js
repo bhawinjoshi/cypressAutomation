@@ -1,4 +1,4 @@
-import { And, Given } from 'cypress-cucumber-preprocessor/steps'
+import { And } from 'cypress-cucumber-preprocessor/steps'
 import filesPage from '../../../pages/filesPage.js';
 const files_PO = new filesPage();
 
