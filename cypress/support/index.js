@@ -15,7 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
-import '../integration/utils/login.js'
 import '../integration/pages/loginPage.js'
 
 
