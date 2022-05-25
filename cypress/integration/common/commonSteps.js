@@ -7,11 +7,11 @@ const userDetailsClient = { "device_token": "de42d772e3d46e097a1ed23594395f75a00
 const userDetailsAdvisor = { "device_token": "d7e3305f890a99caebe12c8cbb5b1ecabf21581d", "is_first_login": false }
 const userNameClient = "automationtest@codaldemo.com";
 const passwordClient = "Moneta@123"
-const userNameAdvisor = "automationtest@codaldemo.com";
+const userNameAdvisor = "advisorautomationtest@codaldemo.com";
 const passwordAdvisor = "Moneta@123"
 
 Given('Login into Moneta as {string}', (string) => {
-    if (string = "Client") {
+    if (string == "Client") {
         cy.visit("/", {
             onBeforeLoad: function (window) {
                 window.localStorage.setItem('userDetails', JSON.stringify(userDetailsClient));
@@ -21,7 +21,7 @@ Given('Login into Moneta as {string}', (string) => {
         login_PO.next_button().click()
         login_PO.password_textbox().type(passwordClient)
     }
-    else if (string = "Advisor") {
+    else if (string == "Advisor") {
         cy.visit("/", {
             onBeforeLoad: function (window) {
                 window.localStorage.setItem('userDetails', JSON.stringify(userDetailsAdvisor));
