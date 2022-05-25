@@ -32,10 +32,9 @@ Given('Login into Moneta as {string}', (string) => {
         login_PO.password_textbox().type(passwordAdvisor)
     }
     login_PO.loginButton().click()
-    dashboard_PO.homeLabel().should('be.visible', { timeout: 30000 })
-    dashboard_PO.bannerImage().should('be.visible', { timeout: 30000 })
+    dashboard_PO.homeLabel().should('be.visible')
+    dashboard_PO.bannerImage().should('be.visible')
     cy.url().should('include', 'dashboard')
-
 })
 
 Given('Click on {string} from Left Navigation', (string) => {
