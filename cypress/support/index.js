@@ -14,8 +14,20 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
+import loginPage from '../integration/pages/loginPage.js'
+const login_PO = new loginPage();
+import dashboardPage from '../integration/pages/dashboardPage.js'
+const dashboard_PO = new dashboardPage();
+
 import './commands'
 import '../integration/pages/loginPage.js'
+
+// after(() => {
+//     dashboard_PO.emailDashboard().trigger('mouseover')
+//     dashboard_PO.logoutPopup().contains('Logout').should('be.visible')
+//     dashboard_PO.logoutPopup().contains('Logout').click()
+//     login_PO.loginHeading().should('be.visible')    
+// })
 
 
 // Alternatively you can use CommonJS syntax:
