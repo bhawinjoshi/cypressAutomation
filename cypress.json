@@ -1,11 +1,9 @@
 {
-  "reporter": "mochawesome",
-  "env": {
-    "stage_url": "https://www.google.com"
-  },
+  "baseUrl": "https://moneta_dev:T6J4WFVBuoXA@dev.moneta.stage-codal.net/",
   "testFiles": "**/*.{feature,features}",
   "projectId": "fjy78m",
   "retries": {
-    "runMode": 1
-  }
+    "runMode": 0
+  },
+  "video": false
 }

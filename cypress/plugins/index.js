@@ -17,7 +17,14 @@ const cucumber = require('cypress-cucumber-preprocessor').default;
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
-  on('file:preprocessor', cucumber())
+  on('file:preprocessor', cucumber()) // for Cucumber preProcessor
+  // To run tests in Chrome incognito mode.
+  on("before:browser:launch", (browser, launchOptions) => {
+    if (browser.name === "chrome") {
+      launchOptions.args.push("--incognito");
+    }
+    return launchOptions;
+  });
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 }
