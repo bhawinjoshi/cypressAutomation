@@ -6,5 +6,6 @@
     "runMode": 0
   },
   "video": false,
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout" : 10000
 }
