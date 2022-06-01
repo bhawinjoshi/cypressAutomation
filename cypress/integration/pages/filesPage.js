@@ -12,8 +12,10 @@ class filesPage {
     browseFiles_link() { return cy.get("input[type='file']") }
     upload_Button() {return cy.get("button[variant='primary']")}
     fileUploaded_Name() {return cy.get("div[class='d-flex align-items-center text-black'] span[class='overflow-text-ant']")}
-    fileUpload_SuccessMessage() {return cy.get("div[class='ant-notification-notice-description']")}
-    fileUploadedinList() {return cy.get("div[class='d-flex align-items-center'] :nth-child(3) p")}
+    successMessage() {return cy.get("div[class='ant-notification-notice-description']")}
+    fileUploadedinList() {return cy.get("div[class='d-flex align-items-center'] div p")}
+    
+    
 
 
 

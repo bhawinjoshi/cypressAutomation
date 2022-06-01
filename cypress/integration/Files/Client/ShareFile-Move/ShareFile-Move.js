@@ -2,8 +2,6 @@ import { And, Then } from 'cypress-cucumber-preprocessor/steps'
 import filesPage from '../../../pages/filesPage.js';
 const files_PO = new filesPage();
 const filePath = 'cypress/fixtures/Test Files/Automation_TestClientDemo.pdf'
-let newFolderName = "Automation_Test_" + Math.floor((Math.random() * 1000) + 1);
-
 
 // And('Verify Files page is displayed successfully', () => {
 //     files_PO.filesHeader().contains('Files').should('be.visible')
@@ -47,20 +45,15 @@ And('Click on Upload button from Upload Files pop-up', () => {
 Then('Success message should be displayed and File should be uploaded successfully', () => {
     files_PO.successMessage().contains("Uploaded 1 item to ").should('be.visible')
     files_PO.fileUploadedinList().should('contain', 'Automation_TestClientDemo.pdf')
-    cy.log(newFolderName);
 
 
-    // cy.get('tbody > tr').find('p.cursor-pointer.m-0.overflow-text-ant')
-    //     .each(($el) => {
-    //         cy.wrap($el).invoke('text').then(text => {
-    //             if (text == "Automation_TestClientDemo.pdf") {
-    //                 cy.log(text)
-    //                 cy.get("td.ant-table-cell.position-static.ant-table-cell-row-hover a:nth-child(4)").click({ force: true })
-    //             }
-    //         })
-    //     })
-})
-
-Then('Enter Folder Name and click on Create button', () => {
-    
+    cy.get('tbody > tr').find('p.cursor-pointer.m-0.overflow-text-ant')
+        .each(($el) => {
+            cy.wrap($el).invoke('text').then(text => {
+                if (text == "Automation_TestClientDemo.pdf") {
+                    cy.log(text)
+                    cy.get("td.ant-table-cell.position-static.ant-table-cell-row-hover a:nth-child(4)").click({ force: true })
+                }
+            })
+        })
 })
