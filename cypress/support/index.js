@@ -22,6 +22,12 @@ const dashboard_PO = new dashboardPage();
 import './commands'
 import '../integration/pages/loginPage.js'
 
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false
+  })
+
 // after(() => {
 //     dashboard_PO.emailDashboard().trigger('mouseover')
 //     dashboard_PO.logoutPopup().contains('Logout').should('be.visible')

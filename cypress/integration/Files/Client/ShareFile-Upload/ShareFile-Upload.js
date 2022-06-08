@@ -4,29 +4,6 @@ const files_PO = new filesPage();
 const filePath = 'cypress/fixtures/Test Files/Automation_TestClientDemo.pdf'
 let newFolderName = "Automation_Test_" + Math.floor((Math.random() * 1000) + 1);
 
-
-// And('Verify Files page is displayed successfully', () => {
-//     files_PO.filesHeader().contains('Files').should('be.visible')
-//     files_PO.sharedTab().should('be.visible')
-//     files_PO.favoritesTab().should('be.visible')
-//     cy.url().should('include', 'share-file')
-// })
-
-// And('Click on {string} Root Folder on Files page', (string) => {
-//     files_PO.rootFolder().contains(string).should('be.visible')
-//     files_PO.rootFolder().contains(string).click()
-// })
-
-// And('Hover on Add New button and select {string}', (string) => {
-//     files_PO.addNew_Button().trigger('mouseover')
-//     files_PO.addNew_Selection().contains(string).click()
-// })
-
-And('Upload Files pop-up should be displayed with disabled Upload button', () => {
-    files_PO.addNew_Selection_Popup().should('be.visible')
-    files_PO.upload_Button().should('be.disabled')
-})
-
 And('Click on Browse Files link in Upload Files pop-up', () => {
     files_PO.browseFiles_link().click({ force: true })
 })
@@ -47,7 +24,7 @@ And('Click on Upload button from Upload Files pop-up', () => {
 Then('Success message should be displayed and File should be uploaded successfully', () => {
     files_PO.successMessage().contains("Uploaded 1 item to ").should('be.visible')
     files_PO.fileUploadedinList().should('contain', 'Automation_TestClientDemo.pdf')
-    cy.log(newFolderName);
+    files_PO.successMessage().contains("Uploaded 1 item to ").should('not.be.visible')
 
 
     // cy.get('tbody > tr').find('p.cursor-pointer.m-0.overflow-text-ant')
@@ -61,6 +38,11 @@ Then('Success message should be displayed and File should be uploaded successful
     //     })
 })
 
-Then('Enter Folder Name and click on Create button', () => {
-    
+Then('Enter Folder Name, click on Create button and verify folder is created successfully', () => {
+
+    files_PO.folderName_textbox().type(newFolderName);
+    files_PO.upload_Button().click()
+    files_PO.successMessage().contains("Created new folder").should('be.visible')
+    files_PO.fileUploadedinList().should('contain', newFolderName)
+    files_PO.successMessage().contains("Created new folder").should('not.be.visible')
 })

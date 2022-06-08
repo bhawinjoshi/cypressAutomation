@@ -10,10 +10,13 @@ class filesPage {
     addNew_Selection() { return cy.get("span[class='ant-dropdown-menu-title-content']") }
     addNew_Selection_Popup() { return cy.get(".modal-title.h4") }
     browseFiles_link() { return cy.get("input[type='file']") }
-    upload_Button() {return cy.get("button[variant='primary']")}
+    upload_Button() {return cy.get("div[class='modal-footer'] button[variant='primary']")} //Create button under New Folder pop-up has same locator. 
     fileUploaded_Name() {return cy.get("div[class='d-flex align-items-center text-black'] span[class='overflow-text-ant']")}
     successMessage() {return cy.get("div[class='ant-notification-notice-description']")}
     fileUploadedinList() {return cy.get("div[class='d-flex align-items-center'] div p")}
+    newFolder_Popup() {return cy.get("")}
+    folderName_textbox() {return cy.get("div[class='form-group mb-0'] input[type='text']")}
+    
     
     
 
