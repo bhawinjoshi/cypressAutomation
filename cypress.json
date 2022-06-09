@@ -7,5 +7,5 @@
   },
   "video": false,
   "chromeWebSecurity": false,
-  "defaultCommandTimeout" : 15000
+  "defaultCommandTimeout": 30000
 }

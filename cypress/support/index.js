@@ -21,6 +21,7 @@ const dashboard_PO = new dashboardPage();
 
 import './commands'
 import '../integration/pages/loginPage.js'
+require('cypress-xpath')
 
 Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from

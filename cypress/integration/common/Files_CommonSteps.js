@@ -20,7 +20,7 @@ And('Hover on Add New button and select {string}', (string) => {
     files_PO.addNew_Selection().contains(string).click()
 })
 
-And('{string} pop-up should be displayed with disabled {string} button', (popupheader, primarybutton ) => {
+And('{string} pop-up should be displayed with disabled {string} button', (popupheader, primarybutton) => {
     files_PO.addNew_Selection_Popup().contains(popupheader).should('be.visible')
     files_PO.upload_Button().contains(primarybutton).should('be.disabled')
 })
