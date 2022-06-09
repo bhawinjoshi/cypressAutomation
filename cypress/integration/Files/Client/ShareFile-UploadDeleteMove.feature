@@ -1,6 +1,6 @@
-Feature: Verify Upload File in ShareFile as Client
+Feature: Verify Upload, Delete and Move File into Folder in ShareFile as Client
 
-    Scenario: Verify Upload File in ShareFile as Client
+    Scenario: Verify Upload, Delete and Move File into Folder in ShareFile as Client
 
         Given Login into Moneta as 'Client'
         When  Click on 'share-file' from Left Navigation
