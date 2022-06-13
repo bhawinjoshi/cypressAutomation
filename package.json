@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules\\.bin\\cypress run --headed --browser chrome",
-    "testHeadless": "node_modules\\.bin\\cypress run",
+    "testHeadless": "node_modules\\.bin\\cypress run --browser chrome",
     "preSetup": "npm i",
     "recordDashboardTest": "npm run test -- --record --key 6cc956cb-2ecb-44d1-8ede-6e0dd49abf7d ",
     "generate-report": "node cucumber-html-report.js"
@@ -16,14 +16,24 @@
     "cypress": "^9.7.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
     "cypress-localstorage-commands": "^1.7.0",
+    "cypress-xpath": "^1.6.2",
     "multiple-cucumber-html-reporter": "^1.20.0"
   },
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
     "caniuse-lite": "^1.0.30001332",
     "mocha": "^9.2.2"
   },
+  "stepDefinitions": [
+    "cypress/integration/[filepath]/**/*.{js,ts}",
+    "cypress/integration/[filepath].{js,ts}",
+    "cypress/support/step_definitions/**/*.{js,ts}"
+  ],
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
+    "json": {
+      "enabled": true
+    },
     "cucumberJson": {
       "generate": true,
       "outputFolder": "reports/cucumber-json",

@@ -7,6 +7,7 @@ const userDetailsClient = { "device_token": "de42d772e3d46e097a1ed23594395f75a00
 const userDetailsAdvisor = { "device_token": "d7e3305f890a99caebe12c8cbb5b1ecabf21581d", "is_first_login": false }
 let data;
 
+//Load All the data from loginData.json file from fixture folder
 Before(() => {
     cy.fixture('loginData').then((tData) => {
         data = tData;
