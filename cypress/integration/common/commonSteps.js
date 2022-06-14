@@ -42,6 +42,10 @@ Given('Login into Moneta as {string}', (string) => {
 })
 
 When('Click on {string} from Left Navigation', (string) => {
-    cy.get("a[href='/dashboard/" + string + "']", { timeout: 10000 }).should('be.visible')
-    cy.get("a[href='/dashboard/" + string + "']").click()
+    cy.xpath("//a[normalize-space()='" + string + "']", { timeout: 10000 }).should('be.visible')
+    cy.xpath("//a[normalize-space()='" + string + "']").click()
+})
+
+And('Click on {string} button', (string) => {
+    cy.xpath("//button[normalize-space()='" + string + "']").click()
 })

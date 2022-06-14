@@ -84,6 +84,7 @@ Then('Click on enabled {string} button', (primarybutton) => {
 Then('Success message should be displayed and File should be moved successfully to selected folder', () => {
     files_PO.successMessage().contains("Moved 1 item to").should('be.visible')
     cy.xpath('//p[@class="cursor-pointer m-0 overflow-text-ant" and normalize-space()="' + uploadedFile + '"]').should('not.exist')
+    files_PO.successMessage().contains("Moved 1 item to").should('not.be.visible')
     cy.xpath("//p[normalize-space()='" + newFolderName + "']").click()
     cy.xpath("//p[normalize-space()='" + uploadedFile + "']").should('be.visible')
 })
