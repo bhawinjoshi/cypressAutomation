@@ -37,7 +37,7 @@ And('Click on Delete icon near signature textbox', () => {
     docusign_PO.deleteSignature_Button().click()
 })
 
-And('Verify that added signature is delete successfully', () => {
+And('Verify that added signature is deleted successfully', () => {
     docusign_PO.signature_Textbox().should('not.exist')
     docusign_PO.initials_Textbox().should('not.exist')
 })

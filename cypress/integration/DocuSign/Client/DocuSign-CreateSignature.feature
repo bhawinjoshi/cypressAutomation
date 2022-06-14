@@ -18,7 +18,7 @@ Feature: Verify create signature in DocuSign as Client
 
         #Delete added signature so that signature picture can be uploaded
         And   Click on Delete icon near signature textbox
-        Then  Verify that added signature is delete successfully
+        Then  Verify that added signature is deleted successfully
 
         #Upload Signature
         And   Click on 'Create Your Signature and Initials' button
@@ -27,4 +27,8 @@ Feature: Verify create signature in DocuSign as Client
         And   Click on 'Create' button
         And   Click on 'My Signature' button
         And   Verify that added signature is present with Signature and Initials
-        Then  Click on 'Done' button
+
+        #Delete added signature again so that next run does not fail (At a time only one signature will be present)
+        And   Click on Delete icon near signature textbox
+        Then  Verify that added signature is deleted successfully
+        Then  Close the 'My Signature' pop-up
