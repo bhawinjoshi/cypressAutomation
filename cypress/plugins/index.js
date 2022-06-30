@@ -21,7 +21,7 @@ module.exports = (on, config) => {
   // To run tests in Chrome incognito mode.
   on("before:browser:launch", (browser, launchOptions) => {
     if (browser.name === "chrome") {
-      launchOptions.args.push("--incognito");
+      launchOptions.args.push("--incognito --disable-gpu");
     }
     return launchOptions;
   });
