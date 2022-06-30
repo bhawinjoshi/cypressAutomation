@@ -20,8 +20,8 @@ module.exports = (on, config) => {
   on('file:preprocessor', cucumber()) // for Cucumber preProcessor
   // To run tests in Chrome incognito mode.
   on("before:browser:launch", (browser, launchOptions) => {
-    if (browser.name === "chrome") {
-      launchOptions.args.push("--incognito --disable-gpu");
+    if (browser.name === "chrome" && browser.isHeadless) {
+      launchOptions.args.push("--disable-gpu");
     }
     return launchOptions;
   });
