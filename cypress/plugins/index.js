@@ -21,7 +21,7 @@ module.exports = (on, config) => {
   // To run tests in Chrome incognito mode.
   on("before:browser:launch", (browser, launchOptions) => {
     if (browser.name === 'chrome' && browser.isHeadless) {
-      launchOptions.args.push('--disable-dev-shm-usage');
+      launchOptions.args.push('--disable-gpu --disable-dev-shm-usage');
     }
     return launchOptions;
   });
