@@ -1,7 +1,6 @@
 import { And, Then } from 'cypress-cucumber-preprocessor/steps'
 import filesPage from '../../../pages/filesPage.js';
 const files_PO = new filesPage();
-const filePath = 'cypress/fixtures/Test Files/Automation_TestClientDemo.pdf'
 let newFolderName = "Automation_Test_" + Math.floor((Math.random() * 1000) + 1);
 const uploadedFile = "Automation_TestClientDemo.pdf"
 
@@ -11,7 +10,7 @@ And('Click on Browse Files link in Upload Files pop-up', () => {
 })
 
 And('Select a File to upload', () => {
-    files_PO.browseFiles_link().selectFile(filePath) //selectFile is used for File Upload
+    files_PO.browseFiles_link().attachFile("Automation_TestClientDemo.pdf") //selectFile is used for File Upload
     files_PO.fileUploaded_Name().contains(uploadedFile).should('be.visible')
 })
 
