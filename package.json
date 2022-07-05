@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rimraf .\\reports",
     "test": "npm run clean && node_modules\\.bin\\cypress run --headed --browser chrome",
-    "testHeadless": "npm run clean && node_modules\\.bin\\cypress run --browser chrome",
+    "testHeadless": "npm run clean && node_modules/.bin/cypress run --browser chrome",
     "preSetup": "npm i",
     "recordDashboardTest": "npm run test -- --record --key 6cc956cb-2ecb-44d1-8ede-6e0dd49abf7d ",
     "generate-report": "node cucumber-html-report.js"
