@@ -1,4 +1,8 @@
 /// <reference types="cypress" />
+
+const { reporters } = require('mocha');
+const rimraf = require('rimraf');
+
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -25,6 +29,27 @@ module.exports = (on, config) => {
     }
     return launchOptions;
   });
+
+  // on('before:run', () => {
+  //   const pathToDir = "./reports/cucumber-json";
+  //   rimraf(pathToDir, function (e) {
+  //     if (e)
+  //       console.log(e);
+  //   });
+  // })
+  on('after:run', () => {
+    
+
+
+    
+    // options.metadata.browser.name= _browser.name
+    // options.metadata.browser.name = _browser.name
+    // options.metadata.browser.version = _browser.version
+    // report.getCucumberReportMaps();
+    // report.addScreenshots();
+    // report.generateReport(options);
+  })
+ 
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
 }

@@ -15,6 +15,9 @@ class docusignPage {
     initialsUpload_link() { return cy.xpath("(//input[@type='file'])[2]") }
     signatureUpload_image() { return cy.get("img[class='mh-100 mw-100']") }
     initialsUpload_image() { return cy.get("img[class='mw-100 mh-100']") }
+    threedots_Button(){return cy.xpath("//tr[@class='ant-table-row ant-table-row-level-0']//td[4]//div//button//em")}
+    sign_Option() {return cy.get(".ant-dropdown-menu-title-content")}
+    continue_Button() {return cy.get("#action-bar-btn-continue")}
 
 
 

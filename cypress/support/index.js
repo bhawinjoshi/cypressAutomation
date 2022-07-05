@@ -29,12 +29,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   return false
 })
 
+
+
 // after(() => {
-//   cy.xpath("//a[normalize-space()='Home']", { timeout: 10000 }).should('be.visible')
-//   cy.xpath("//a[normalize-space()='Home']").click()
-//   dashboard_PO.emailDashboard().trigger('mouseover')
-//   dashboard_PO.logoutPopup().contains('Logout').should('be.visible')
-//   dashboard_PO.logoutPopup().contains('Logout').click()
+//   cy.clickonLeftNavigation("Home")
+//   dashboard_PO.downarrow().click()
+//   dashboard_PO.logoutLink().should('be.visible')
+//   dashboard_PO.logoutLink().click()
 //   login_PO.loginHeading().should('be.visible')
 // })
 

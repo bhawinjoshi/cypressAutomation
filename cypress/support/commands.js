@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+import 'cypress-iframe'
 import "cypress-localstorage-commands";
 import loginPage from '../integration/pages/loginPage.js'
 const login_PO = new loginPage();
@@ -70,6 +71,28 @@ Cypress.Commands.add('clickButton', (buttonName) => {
 Cypress.Commands.add('closePopup', (popupHeader) => {
   cy.xpath("//div[normalize-space()='" + popupHeader + "']//button[@class='btn-close']").click()
 })
+
+export function checkIfEleExists(ele){
+  return new Promise((resolve,reject)=>{
+      /// here if  ele exists or not
+      cy.get('body').find( ele ).its('length').then(res=>{
+          if(res > 0){
+              //// do task that you want to perform
+              cy.get(ele).click().wait(2000);
+              resolve();
+          }else{
+              reject();
+          }
+      });
+  })
+}
+
+// Cypress.Commands.add('getIframe', (iframe) => {
+//   return cy.get(iframe)
+//       .its('0.contentDocument.body')
+//       .should('be.visible')
+//       .then(cy.wrap);
+// })
 //
 //
 // -- This is a child command --

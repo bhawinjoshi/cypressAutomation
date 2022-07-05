@@ -49,4 +49,41 @@ And('Select Signature and Initials file to upload and verify they are upload suc
     docusign_PO.signatureUpload_image().should('be.visible')
     docusign_PO.initialsUpload_image().scrollIntoView()
     docusign_PO.initialsUpload_image().should('be.visible')
+
+})
+
+And('Click on three dots button for row number {string}', function (rowNumber) {
+    cy.xpath("//tbody[@class='ant-table-tbody']//tr[" + rowNumber + "]//td[4]//button//em").click()
+})
+
+
+And('Click {string} option from menu', (menuOption) => {
+    docusign_PO.sign_Option().contains(menuOption).click()
+})
+
+And('Click on CONTINUE button', () => {
+    cy.wait(15000)
+    cy.iframe('#iframe-view-doc').find('#action-bar-btn-continue').click()
+})
+
+And('Click on SIGN icon in the Document', () => {
+    cy.iframe('#iframe-view-doc').find('i[class="sign-arrow"]').click()
+})
+
+And('Adopt Your Signature popup should be displayed', () => {
+    cy.iframe('#iframe-view-doc').find('h1[id="adopt-dialog-title"]').should('be.visible')
+})
+
+And('Click on ADOPT AND SIGN button', () => {
+    cy.iframe('#iframe-view-doc').find('button[data-qa="adopt-submit"]:nth-child(1)').click()
+})
+
+And('Signature should be visible on document', () => {
+    cy.iframe('#iframe-view-doc').find('img[class="tab-complete-image signature-image"]').should('be.visible')
+})
+
+And('Click on Finish button', () => {
+    cy.iframe('#iframe-view-doc').find('div[id="finish-button-callout"]').click()
+    cy.wait(15000)
+    cy.reload()
 })
