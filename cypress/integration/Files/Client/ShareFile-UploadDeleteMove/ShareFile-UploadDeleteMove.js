@@ -40,21 +40,6 @@ Then('Enter Folder Name, click on Create button and verify folder is created suc
 Then('Hover on uploaded file or folder and click on {string}', (string) => {
 
     cy.xpath('//p[@class="cursor-pointer m-0 overflow-text-ant" and normalize-space()="' + uploadedFile + '"]').trigger('mouseover').get("td.ant-table-cell.position-static.ant-table-cell-row-hover").find('a').contains(string).click({ force: true })
-
-    //cy.get("td.ant-table-cell.position-static.ant-table-cell-row-hover").find('a').contains(string).click()
-
-
-    //cy.get("td.ant-table-cell.position-static.ant-table-cell-row-hover").find('a').contains(string).click({ force: true })
-    // cy.get('tbody > tr').find('p.cursor-pointer.m-0.overflow-text-ant')
-    //     .each(($el) => {
-    //         cy.wrap($el).invoke('text').then(text => {
-    //             if (text == uploadedFile) {
-    //                 cy.log(text)
-    //                 //cy.get("td.ant-table-cell.position-static.ant-table-cell-row-hover a:nth-child(4)").click({ force: true })
-    //                 cy.get("td.ant-table-cell.position-static.ant-table-cell-row-hover").find('a').contains(string).click({ force: true })
-    //             }
-    //         })
-    //     })
 })
 
 Then('Verify File or folder is deleted successfully', () => {
@@ -86,4 +71,15 @@ Then('Success message should be displayed and File should be moved successfully 
     files_PO.successMessage().contains("Moved 1 item to").should('not.be.visible')
     cy.xpath("//p[normalize-space()='" + newFolderName + "']").click()
     cy.xpath("//p[normalize-space()='" + uploadedFile + "']").should('be.visible')
+})
+
+Then('Hover on newly created folder and click on {string}', (string) => {
+
+    cy.xpath('//p[@class="cursor-pointer m-0 overflow-text-ant" and normalize-space()="' + newFolderName + '"]').trigger('mouseover').get("td.ant-table-cell.position-static.ant-table-cell-row-hover").find('a').contains(string).click({ force: true })
+})
+
+Then('Verify newly created folder is deleted successfully', () => {
+    files_PO.deleteItemMessage().contains("Deleted 1 item").should('be.visible')
+    cy.reload()
+    cy.xpath('//p[@class="cursor-pointer m-0 overflow-text-ant" and normalize-space()="' + newFolderName + '"]').should('not.exist')
 })

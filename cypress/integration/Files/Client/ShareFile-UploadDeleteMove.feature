@@ -40,3 +40,8 @@ Feature: Verify Upload, Delete and Move File into Folder in ShareFile as Client
         And    Click on radio button for newly created folder
         And    Click on enabled 'Move' button
         Then  Success message should be displayed and File should be moved successfully to selected folder
+
+        #Delete Newly Created folder
+        And    Click on 'CodalTeam_Clients' breadcrumb link
+        And    Hover on newly created folder and click on 'Delete'
+        And    Verify newly created folder is deleted successfully

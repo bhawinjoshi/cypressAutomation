@@ -24,3 +24,8 @@ And('{string} pop-up should be displayed with disabled {string} button', (popuph
     files_PO.addNew_Selection_Popup().contains(popupheader).should('be.visible')
     files_PO.upload_Button().contains(primarybutton).should('be.disabled')
 })
+
+And('Click on {string} breadcrumb link', (breadcrumb) => {
+    cy.wait(2000)
+    files_PO.breadcrumb_link().contains(breadcrumb).click()
+})
