@@ -3,7 +3,7 @@ Feature: Verify Upload, Delete and Move File into Folder in ShareFile as Client
     Scenario: Verify Upload, Delete and Move File into Folder in ShareFile as Client
 
         Given Login into Moneta as 'Client'
-        When  Click on 'share-file' from Left Navigation
+        When  Click on 'Files' from Left Navigation
         Then  Verify Files page is displayed successfully
         And   Click on 'CodalTeam_Clients' Root Folder on Files page
 
