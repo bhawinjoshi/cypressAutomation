@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf .\\reports\\cucumber-json",
+    "clean": "rimraf .\\reports\\cucumber-json && rimraf .\\cypress\\screenshots ",
     "test": "npm run clean && node_modules\\.bin\\cypress run --headed --browser chrome",
     "testHeadless": "npm run clean && node_modules/.bin/cypress run --browser chrome",
     "preSetup": "npm i",

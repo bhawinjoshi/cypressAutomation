@@ -5,7 +5,7 @@ Feature: Verify Upload, Delete and Move File into Folder in ShareFile as Client
         Given Login into Moneta as 'Client'
         When  Click on 'Files' from Left Navigation
         Then  Verify Files page is displayed successfully
-        And   Click on 'CodalTeam_Clients' Root Folder on Files page
+        And   Click on 'AutomationTest' Root Folder on Files page
 
         #Create New Folder
         And   Hover on Add New button and select 'New Folder'
@@ -36,12 +36,12 @@ Feature: Verify Upload, Delete and Move File into Folder in ShareFile as Client
         And   Hover on uploaded file or folder and click on 'Move'
         And   'Move 1 item to...' pop-up should be displayed with disabled 'Move' button
         And    Click on right arrow for Shared Folders
-        And    Click on right arrow near 'CodalTeam_Clients' under Shared Folders
+        And    Click on right arrow near 'AutomationTest' under Shared Folders
         And    Click on radio button for newly created folder
         And    Click on enabled 'Move' button
         Then  Success message should be displayed and File should be moved successfully to selected folder
 
         #Delete Newly Created folder
-        And    Click on 'CodalTeam_Clients' breadcrumb link
+        And    Click on 'AutomationTest' breadcrumb link
         And    Hover on newly created folder and click on 'Delete'
         And    Verify newly created folder is deleted successfully

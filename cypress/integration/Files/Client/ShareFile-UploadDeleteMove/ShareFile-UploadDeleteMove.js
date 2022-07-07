@@ -80,6 +80,7 @@ Then('Hover on newly created folder and click on {string}', (string) => {
 
 Then('Verify newly created folder is deleted successfully', () => {
     files_PO.deleteItemMessage().contains("Deleted 1 item").should('be.visible')
+    files_PO.deleteItemMessage().contains("Deleted 1 item").should('not.be.visible')
     cy.reload()
     cy.xpath('//p[@class="cursor-pointer m-0 overflow-text-ant" and normalize-space()="' + newFolderName + '"]').should('not.exist')
 })
