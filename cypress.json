@@ -5,7 +5,7 @@
   "retries": {
     "runMode": 0
   },
-  "video": true,
+  "video": false,
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 30000,
   "screenshotOnRunFailure": true  
