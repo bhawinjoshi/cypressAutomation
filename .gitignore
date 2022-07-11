@@ -8,7 +8,6 @@ Configuration/appConfig.properties
 package-lock.json
 reports
 videos
-monetaAutomation/cucumber-html-report.js
 jsconfig.json
 screenshots
 .vscode/

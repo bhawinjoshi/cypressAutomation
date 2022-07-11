@@ -12,13 +12,13 @@ report.generate({
     metadata: {
         browser: {
             name: 'chrome',
-            version: '100',
+            version: '103.0.5060.114'          
             
         },
-        device: 'win32',
+        device: os.platform(),
         platform: {
             name: 'Windows',
-            version: '10'
+            version: os.release()
         }
     },
     

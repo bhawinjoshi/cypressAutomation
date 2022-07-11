@@ -2,7 +2,6 @@ import { And } from 'cypress-cucumber-preprocessor/steps'
 import messagesPage from '../pages/messagesPage.js';
 const messages_PO = new messagesPage();
 
-
 And('Verify Messages page is displayed successfully', () => {
     messages_PO.messagesHeader().contains('Messages').should('be.visible')
     messages_PO.channelsLabel().should('be.visible')
@@ -35,9 +34,26 @@ And('Click on info icon in channel', () => {
 })
 
 And('Click on Leave channel', () => {
+    cy.wait(2000)
     messages_PO.leavechannel_button().click()
 })
 
 And('Verify user left the channel successfully', () => {
     messages_PO.createdchannel().should('not.exist')
+})
+
+And('Type {string} in messagebox and hit Enter', (chatMessage) => {
+    messages_PO.enterMessage_textarea().type(chatMessage).type('{enter}')
+
+})
+
+And('Verify that {string} message is sent and displayed in chat', (chatMessage) => {
+    messages_PO.sentMessage().contains(chatMessage).should('be.visible')
+    cy.wait(5000)
+
+})
+
+And('Click on attach icon in message box and send a file', () => {
+    cy.xpath("//*[name()='path' and contains(@class,'icon-attac')]").attachFile("Automation_TestClientDemo.pdf")
+    cy.wait(5000)
 })
