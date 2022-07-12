@@ -11,6 +11,6 @@ Feature: Verify send messages in Messages as Client
         Then  New channel should be created successfully
         And   Click on newly created channel
         And   Click on attach icon in message box and send a file
-        And   Click on info icon in channel
-        And   Click on Leave channel
-        Then  Verify user left the channel successfully 
+        # And   Click on info icon in channel
+        # And   Click on Leave channel
+        # Then  Verify user left the channel successfully 

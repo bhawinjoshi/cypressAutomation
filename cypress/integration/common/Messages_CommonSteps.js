@@ -55,7 +55,7 @@ And('Verify that {string} message is sent and displayed in chat', (chatMessage) 
 
 And('Click on attach icon in message box and send a file', () => {
     //cy.xpath("//*[name()='path' and contains(@class,'icon-attac')]").attachFile("Automation_TestClientDemo.pdf")
-    cy.get('.sendbird-icon.sendbird-icon-attach.sendbird-icon-color--content-inverse').attachFile("Automation_TestClientDemo.pdf")
+    cy.get('.sendbird-icon.sendbird-icon-attach.sendbird-icon-color--content-inverse').attachFile("loginData.json")
     cy.wait(5000)
     //cy.get('.sendbird-file-message-item-body__file-name__text.sendbird-label.sendbird-label--body-1.sendbird-label--color-oncontent-1').should('be.visible')
 })
