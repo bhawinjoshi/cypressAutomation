@@ -16,6 +16,7 @@ class filesPage {
     folderName_textbox() { return cy.get("div[class='form-group mb-0'] input[type='text']") }
     deleteItemMessage() { return cy.get("div[class='ant-notification-notice-message']") }
     MovePopup_rightArrow_Shared() { return cy.get("tr[data-row-key='allshared'] em[class='icon icon-chevron-right-outline']") }
+    breadcrumb_link() { return cy.xpath("//ol[@class='breadcrumb']//li") }
 
 
 

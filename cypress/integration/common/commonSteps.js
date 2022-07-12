@@ -1,4 +1,6 @@
 import { Given, When } from 'cypress-cucumber-preprocessor/steps'
+import filesPage from '../pages/filesPage.js';
+const files_PO = new filesPage();
 
 Given('Login into Moneta as {string}', (role) => {
 
@@ -22,4 +24,10 @@ And('Close the {string} pop-up', (popupHeader) => {
 
     cy.closePopup(popupHeader)
 
+})
+
+And('{string} pop-up should be displayed with disabled {string} button', (popupheader, primarybutton) => {
+    
+    files_PO.addNew_Selection_Popup().contains(popupheader).should('be.visible')
+    files_PO.upload_Button().contains(primarybutton).should('be.disabled')
 })

@@ -53,6 +53,21 @@ And('Select Signature and Initials file to upload and verify they are upload suc
 })
 
 And('Click on three dots button for row number {string}', function (rowNumber) {
+    // cy.get('tbody > tr > td > div')
+    //     .then(function ($body) {
+    //         //const empty_msg = $body.find(cy.xpath("//div[@class='ant-empty-description']").contains("Documents requiring your signature will appear here.")).length
+    //         const empty_msg = $body.find('.ant-empty-description').length
+    //         cy.log(empty_msg).then(() => {
+    //             if (empty_msg > 0) {
+    //                 //cy.log('Element not found. Skip the Test')
+    //                 this.skip()
+    //                 //return "skipped"
+    //             } else {
+    //                 cy.xpath("//tbody[@class='ant-table-tbody']//tr[" + rowNumber + "]//td[4]//button//em").click()
+    //             }
+    //         })
+    //     })
+
     cy.xpath("//tbody[@class='ant-table-tbody']//tr[" + rowNumber + "]//td[4]//button//em").click()
 })
 
