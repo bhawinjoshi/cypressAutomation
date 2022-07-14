@@ -43,8 +43,9 @@ And('Verify that added signature is deleted successfully', () => {
 })
 
 And('Select Signature and Initials file to upload and verify they are upload successfully', () => {
-    docusign_PO.signatureUpload_link().selectFile(signaturefilePath)
-    docusign_PO.initialsUpload_link().selectFile(initialsfilePath)
+    
+    docusign_PO.signatureUpload_link().attachFile(signaturefilePath)
+    docusign_PO.initialsUpload_link().attachFile(initialsfilePath)
     docusign_PO.signatureUpload_image().scrollIntoView()
     docusign_PO.signatureUpload_image().should('be.visible')
     docusign_PO.initialsUpload_image().scrollIntoView()
