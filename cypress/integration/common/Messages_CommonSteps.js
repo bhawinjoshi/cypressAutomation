@@ -10,9 +10,7 @@ And('Verify Messages page is displayed successfully', () => {
 })
 
 And('Click on New Channel button', () => {
-    cy.get('.create-channel-btn.icon-32').click()
-    cy.get('.msg-channel-header.d-none.d-md-flex.align-items-center.justify-content-between')
-    //messages_PO.newChannel_button().click()
+    messages_PO.newChannel_button().click()
 })
 
 And('Select {string} names and click on create button', (number) => {
