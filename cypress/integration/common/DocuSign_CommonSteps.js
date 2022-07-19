@@ -43,6 +43,7 @@ And('Verify that added signature is deleted successfully', () => {
 })
 
 And('Select Signature and Initials file to upload and verify they are upload successfully', () => {
+    
     docusign_PO.signatureUpload_link().attachFile("signature-sample.png")
     docusign_PO.initialsUpload_link().attachFile("initials-sample.jpg")
     docusign_PO.signatureUpload_image().scrollIntoView()

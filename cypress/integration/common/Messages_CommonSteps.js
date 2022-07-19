@@ -19,6 +19,7 @@ And('Select {string} names and click on create button', (number) => {
         cy.xpath("//ul[contains(@class,'message-check-list')]//li[" + i + "]//input").click()
     }
     cy.wait(1000)
+    messages_PO.create_button().should('be.enabled')
     messages_PO.create_button().click()
 })
 
@@ -106,4 +107,4 @@ And('Click on Delete button in Delete Message popup', () => {
 And('Verify that {string} message is not displayed in chat', (chatMessage) => {
     messages_PO.sentMessage().contains(chatMessage).should('not.exist')
     cy.wait(2000)
-})
+}) 
