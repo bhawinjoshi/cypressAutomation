@@ -18,6 +18,7 @@ And('Select {string} names and click on create button', (number) => {
     for (var i = 1; i <= number; i += 1) {
         cy.xpath("//ul[contains(@class,'message-check-list')]//li[" + i + "]//input").click()
     }
+    messages_PO.create_button().should('be.enabled')
     messages_PO.create_button().click()
 })
 
