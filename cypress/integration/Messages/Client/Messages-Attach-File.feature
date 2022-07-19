@@ -1,6 +1,6 @@
-Feature: Verify send messages in Messages as Client
+Feature: Verify attach File in Messages as Client
 
-    Scenario: Verify send messages in Messages as Client
+    Scenario: Verify attach File in Messages as Client
 
         Given Login into Moneta as 'Client'
         When  Click on 'Messages' from Left Navigation
@@ -11,6 +11,7 @@ Feature: Verify send messages in Messages as Client
         Then  New channel should be created successfully
         And   Click on newly created channel
         And   Click on attach icon in message box and send a file
-        # And   Click on info icon in channel
-        # And   Click on Leave channel
-        # Then  Verify user left the channel successfully 
+        Then  Verify sent file is displayed in Message box
+        And   Click on info icon in channel
+        And   Click on Leave channel
+        Then  Verify user left the channel successfully
