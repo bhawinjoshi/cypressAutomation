@@ -10,6 +10,8 @@ And('Verify Messages page is displayed successfully', () => {
 })
 
 And('Click on New Channel button', () => {
+    messages_PO.newChannel_button().should('be.visible')
+    cy.wait(2000)
     messages_PO.newChannel_button().click()
 })
 
