@@ -10,7 +10,7 @@ And('Click on Browse Files link in Upload Files pop-up', () => {
 })
 
 And('Select a File to upload', () => {
-    files_PO.browseFiles_link().attachFile("Automation_TestClientDemo.pdf") 
+    files_PO.browseFiles_link().attachFile("Automation_TestClientDemo.pdf")
     files_PO.fileUploaded_Name().contains(uploadedFile).should('be.visible')
 })
 
